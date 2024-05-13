@@ -1,14 +1,15 @@
-import React from "react";
-import "react-native-gesture-handler";
-import MainNavigation from "./navigation/MainNavigation";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import MainNavigation from './navigation/MainNavigation';
+import 'react-native-gesture-handler';
+import './languages';
 
-function App() {
-  return (
-    <SafeAreaProvider>
-      <MainNavigation />
-    </SafeAreaProvider>
-  );
-}
+const App = () => {
+	return (
+		<SafeAreaProvider>
+			<MainNavigation />
+		</SafeAreaProvider>
+	);
+};
 
 export default App;
