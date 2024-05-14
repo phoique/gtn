@@ -1,1 +1,9 @@
-{}
+{
+	"screens": {
+		"home": {
+			"title": "Sayıyı tahmin et",
+			"startButton": "Oyuna başla",
+			"version": "Sürüm: v{{version}}"
+		}
+	}
+}
