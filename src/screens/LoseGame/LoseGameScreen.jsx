@@ -15,7 +15,7 @@ const LoseGameScreen = () => {
 	};
 
 	return (
-		<Container safeAreaBottom>
+		<Container>
 			<View className='flex flex-1 items-center justify-around my-12'>
 				<Text className='text-5xl text-center font-bold  dark:text-gray-300'>
 					{t('screens.loseGame.title')}

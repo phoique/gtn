@@ -18,6 +18,12 @@
 		},
 		"loseGame": {
 			"title": "Üzgünüm, bugün şansım yaver gitmedi!"
+		},
+		"error": {
+			"title": "Bir hata oluştu",
+			"message": "Bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+			"copyError": "Hatayı kopyala",
+			"toastTitle": "Hata mesajı kopyalandı"
 		}
 	},
 	"form": {

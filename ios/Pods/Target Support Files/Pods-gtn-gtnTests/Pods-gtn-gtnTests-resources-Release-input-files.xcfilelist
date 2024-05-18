@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-gtn-gtnTests/Pods-gtn-gtnTests-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/RNDeviceInfo/RNDeviceInfoPrivacyInfo.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/React-Core/RCTI18nStrings.bundle

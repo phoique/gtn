@@ -14,7 +14,7 @@ const HomeScreen = () => {
 		navigation.navigate('Game');
 	};
 	return (
-		<Container safeAreaBottom>
+		<Container>
 			<View className='flex flex-1'>
 				<View className='flex-1'>
 					<Text className='text-5xl text-center font-bold mt-10 dark:text-gray-300'>
