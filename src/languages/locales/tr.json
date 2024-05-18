@@ -4,6 +4,23 @@
 			"title": "Sayıyı tahmin et",
 			"startButton": "Oyuna başla",
 			"version": "Sürüm: v{{version}}"
+		},
+		"game": {
+			"numberEnterCardTitle": "Öncelikle bir sayı girmelisin",
+			"numberEnterPlaceholder": "Bir sayı gir",
+			"numberEnterTitle": "Girmiş olduğun sayı",
+			"questionCardTitle": "Soruyu cevaplayın",
+			"answerTitle": "Cevaplarım"
+		}
+	},
+	"form": {
+		"field": {
+			"numberEnter": "Sayıyı gir"
+		},
+		"validation": {
+			"numberEnterRequied": "Sayı girmek zorunludur!",
+			"numberEnterMin": "Girilen sayı {{min}}'den küçük olamaz!",
+			"numberEnterMax": "Girilen sayı {{max}}'den büyük olamaz!"
 		}
 	}
 }

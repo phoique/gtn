@@ -12,15 +12,16 @@ const colors = {
 	danger: 'bg-red-500 hover:bg-red-600',
 	light: 'bg-gray-400 hover:bg-gray-400 font-bold py-2 px-4 rounded',
 	dark: 'bg-gray-800 hover:bg-gray-900',
+	transparent: 'bg-transparent hover:bg-gray-200',
 };
 
 const Button = ({ title, onPress, color = 'light', icon }) => {
-	if (!title || !icon) return null;
+	if (!title && !icon) return null;
 	return (
 		<View className='flex-row'>
 			<Pressable
 				onPress={onPress}
-				className={classnames('flex flex-row items-center gap-x-1 py-2 px-4', {
+				className={classnames('flex flex-row items-center gap-x-1 py-2 px-4 rounded-lg', {
 					[colors[color]]: color in colors,
 				})}>
 				{icon && <Icon type='custom' name={icon} className='text-white' />}

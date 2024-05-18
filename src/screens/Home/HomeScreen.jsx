@@ -11,7 +11,7 @@ const HomeScreen = () => {
 	const navigation = useNavigation();
 
 	const handleRedirect = () => {
-		navigation.navigate('Play');
+		navigation.navigate('Game');
 	};
 	return (
 		<Container safeAreaBottom>
@@ -22,6 +22,7 @@ const HomeScreen = () => {
 					</Text>
 				</View>
 				<View className='flex flex-1 items-center'>
+					{/* // TODO: icon eklenecek */}
 					<Button
 						title={t('screens.home.startButton')}
 						color='info'
@@ -29,6 +30,7 @@ const HomeScreen = () => {
 					/>
 				</View>
 				<Text className='text-sm font-bold text-right mr-5 text-black dark:text-white'>
+					{/* // TODO: icon eklenecek */}
 					{t('screens.home.version', { version: `v${packageJson.version}` })}
 				</Text>
 			</View>
