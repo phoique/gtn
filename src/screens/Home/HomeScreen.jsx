@@ -22,15 +22,14 @@ const HomeScreen = () => {
 					</Text>
 				</View>
 				<View className='flex flex-1 items-center'>
-					{/* // TODO: icon eklenecek */}
 					<Button
 						title={t('screens.home.startButton')}
 						color='info'
 						onPress={handleRedirect}
+						icon='Play'
 					/>
 				</View>
 				<Text className='text-sm font-bold text-right mr-5 text-black dark:text-white'>
-					{/* // TODO: icon eklenecek */}
 					{t('screens.home.version', { version: `v${packageJson.version}` })}
 				</Text>
 			</View>

@@ -11,6 +11,13 @@
 			"numberEnterTitle": "Girmiş olduğun sayı",
 			"questionCardTitle": "Soruyu cevaplayın",
 			"answerTitle": "Cevaplarım"
+		},
+		"winGame": {
+			"title": "Bugün sayıların şansı benden yana!",
+			"playAgain": "Anasayfaya dön"
+		},
+		"loseGame": {
+			"title": "Üzgünüm, bugün şansım yaver gitmedi!"
 		}
 	},
 	"form": {
