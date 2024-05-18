@@ -7,11 +7,15 @@ const AnswerCard = () => {
 	return (
 		<Card>
 			<CardBody>
-				<View className='flex flex-row items-center'>
-					<Text className='text-black text-base font-normal mr-3 dark:text-white'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					</Text>
-					<Button color='success' icon='Check' />
+				<View className='flex flex-1 flex-row items-center'>
+					<View className='flex-1'>
+						<Text className='text-black text-base font-normal dark:text-white'>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+						</Text>
+					</View>
+					<View>
+						<Button color='success' icon='Check' />
+					</View>
 				</View>
 			</CardBody>
 		</Card>

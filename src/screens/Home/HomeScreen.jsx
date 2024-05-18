@@ -30,7 +30,7 @@ const HomeScreen = () => {
 					/>
 				</View>
 				<Text className='text-sm font-bold text-right mr-5 text-black dark:text-white'>
-					{t('screens.home.version', { version: `v${packageJson.version}` })}
+					{t('screens.home.version', { version: `${packageJson.version}` })}
 				</Text>
 			</View>
 		</Container>
