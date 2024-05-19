@@ -1,0 +1,44 @@
+{
+	"screens": {
+		"home": {
+			"title": "Guess the number",
+			"startButton": "Start game",
+			"version": "Version: v{{version}}"
+		},
+		"game": {
+			"numberEnterCardTitle": "You should first enter a number",
+			"numberEnterPlaceholder": "Enter a number",
+			"numberEnterTitle": "The number you entered",
+			"questionCardTitle": "Answer the question",
+			"answerTitle": "My Answers",
+			"remainingQuestion": "Remaining question: {{value}}",
+			"estimatedNumber": "The number you are holding",
+			"answerYes": "yes",
+			"answerNo": "No",
+			"answerNull": "don't know",
+
+			"gptSystemText": "I need to guess the number the user has in mind, which is between {{min}} and {{max}}. To proceed correctly and effectively, we must follow certain rules. Here are the rules the system should adhere to:I should ask the user only one question, and this question must be answerable with a \"yes\" or \"no\". If the number range is greater than 10, I should ask a question that narrows down the range. If the number range is less than 10, I should make a guess. Based on the user's response, I should narrow down the number range to find the correct number. I should avoid asking the same questions frequently and avoid asking questions like \"Is it greater than x?\" or \"Is it less than y?\" too often. Since the number chosen by the user is an integer, my guesses and calculations should also be integers. I must ask questions such as \"Is the number you have in mind even?\" or \"Is the number you have in mind a prime number?\". My question format should be like: \"Is the number you have in mind greater than 5?\" or \"Is the number you have in mind a prime number?\"."
+		},
+		"winGame": {
+			"title": "The luck of the numbers is on my side today!",
+			"playAgain": "Back to homepage"
+		},
+		"loseGame": {
+			"title": "Sorry, no luck today!"
+		},
+		"error": {
+			"title": "An error occurred",
+			"message": "An error occurred. Please try again later.",
+			"copyError": "Copy error",
+			"toastTitle": "Error message copied"
+		}
+	},
+	"form": {
+		"field": {
+			"numberEnter": "Enter number"
+		},
+		"validation": {
+			"numberEnterMinMax": "The entered number should be between {{{min}}-{{{max}}!"
+		}
+	}
+}
