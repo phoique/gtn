@@ -23,18 +23,20 @@ A number guessing game with the help of artificial intelligence.
 
 ### Home Screen
 
-![home](./screenshots/home.png)
+<img src="./screenshots/home.png" width="295" height="640">
 
 ### Game Screen
 
-![game](./screenshots/game.png)
+<img src="./screenshots/game.png" width="295" height="640">
 
-![game2](./screenshots/game2.png)
+### Game Screen 2
+
+<img src="./screenshots/game2.png" width="295" height="640">
 
 ### Game Over Screen
 
-![lose](./screenshots/lose.png)
+<img src="./screenshots/lose.png" width="295" height="640">
 
 ### Win Screen
 
-![win](./screenshots/win.png)
+<img src="./screenshots/win.png" width="295" height="640">
