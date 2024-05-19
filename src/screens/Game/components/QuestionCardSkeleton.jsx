@@ -12,6 +12,7 @@ const QuestionCardSkeleton = () => {
 					<View className='flex flex-row justify-around'>
 						<View className='w-10 h-8 bg-slate-300 rounded-lg dark:bg-gray-800' />
 						<View className='w-10 h-8 bg-slate-300 rounded-lg dark:bg-gray-800' />
+						<View className='w-10 h-8 bg-slate-300 rounded-lg dark:bg-gray-800' />
 					</View>
 				</View>
 			</CardBody>

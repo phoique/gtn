@@ -14,7 +14,7 @@ const GameScreen = () => {
 	const answers = useSelector((state) => state.game.answers);
 
 	const renderItem = ({ item }) => {
-		return <AnswerCard question={item.question} answer={item.answer} />;
+		return <AnswerCard question={item.question} answerType={item.answerType} />;
 	};
 
 	return (

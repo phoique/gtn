@@ -6,3 +6,4 @@ export { default as Like } from './Like';
 export { default as Home } from './Home';
 export { default as Error } from './Error';
 export { default as Copy } from './Copy';
+export { default as QuestionMark } from './QuestionMark';

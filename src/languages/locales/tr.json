@@ -15,6 +15,7 @@
 			"estimatedNumber": "tuttuğun sayı",
 			"answerYes": "Evet",
 			"answerNo": "Hayır",
+			"answerNull": "Bilmiyorum",
 			"gptSystemText": "Kullanıcının aklındaki {{min}} ile {{max}} arasındaki sayıyı tahmin etmem gerekiyor. Bu sürecin doğru ve etkili bir şekilde ilerleyebilmesi için belirli kurallara uymalıyız. İşte sistemin uyması gereken kurallar: Kullanıcıya yalnızca bir soru sormalıyım ve bu soru \"evet\" veya \"hayır\" cevabı alacak şekilde olmalıdır. Sayı aralığı 10'dan büyükse sayı aralığını daraltacak bir soru sormalıyım. Sayı aralığı 10'dan küçükse tahminde bulunmalıyım. Kullanıcının verdiği cevaba göre sayı aralığını daraltarak doğru sayıyı bulmaya çalışmalıyım. Aynı soruları sık sık sormamalıyım ve sık sık \"x'den büyük mü\", \"y'den küçük mü\" gibi sorular sormamalıyım. Kullanıcının girdiği sayı tam sayı olduğu için tahminler ve işlemler de tam sayı olmalıdır. Mutlaka \"Tuttuğun sayı çift mi?\", \"Tuttuğun sayı tek mi?\", \"Tuttuğun sayı asal sayı mı?\", \"Tuttuğun sayı sonunda 0 içeriyor mu?\", \"Tuttuğun sayı içerisinde 5 var mı?\", \"Tuttuğun sayı 2 ye tam bölünür mü?\" gibi sorular sormalıyım. Soru kalıbım şu şekilde olmalıdır: \"Tuttuğun sayı 5'ten büyük mü?\" veya \"Tuttuğun sayı asal sayı mı?\" gibi. Kullanıcının tuttuğu sayıyı tahmin etmek istersen eğer soru kalıbında \"tuttuğun sayı\" yazısı mutlaka içermelidir."
 		},
 		"winGame": {

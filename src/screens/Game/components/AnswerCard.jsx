@@ -2,8 +2,10 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import Card, { CardBody } from '../../../components/Card/Card';
 import Button from '../../../components/Button';
+import { questionActionButton } from '../contants';
 
-const AnswerCard = ({ question, answer }) => {
+const AnswerCard = ({ question, answerType }) => {
+	const answerProperty = questionActionButton[answerType];
 	return (
 		<Card>
 			<CardBody>
@@ -14,8 +16,7 @@ const AnswerCard = ({ question, answer }) => {
 						</Text>
 					</View>
 					<View>
-						{answer && <Button color='success' icon='Check' />}
-						{!answer && <Button color='danger' icon='Close' />}
+						<Button color={answerProperty.color} icon={answerProperty.icon} />
 					</View>
 				</View>
 			</CardBody>

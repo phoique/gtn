@@ -9,6 +9,7 @@ import gameSlice from '../../../store/gameSlice';
 import openAiServices from '../../../services/openAiServices';
 import QuestionCardSkeleton from './QuestionCardSkeleton';
 import useGptMessage from '../hooks/useGptMessage';
+import { questionActionButton } from '../contants';
 
 const QuestionCard = () => {
 	const { t } = useTranslation();
@@ -20,11 +21,6 @@ const QuestionCard = () => {
 
 	const question = getGptChatQuery.data?.choices[0].message.content;
 	const remainingQuestion = process.env.MAX_QUESTION_TO_ASK - answers.length;
-
-	const answerTextObject = {
-		true: t('screens.game.answerYes'),
-		false: t('screens.game.answerNo'),
-	};
 
 	const handleAnswer = (answer) => {
 		const questionLoweCase = question.toLocaleLowerCase();
@@ -42,7 +38,7 @@ const QuestionCard = () => {
 				gameSlice.actions.setAnswer({
 					id: new Date().getTime(),
 					question,
-					answer: answerTextObject[answer],
+					answerType: questionActionButton[answer].type,
 				}),
 			);
 		}
@@ -61,8 +57,14 @@ const QuestionCard = () => {
 			<CardBody>
 				<Text className='text-black text-base font-normal dark:text-white'>{question}</Text>
 				<View className='flex flex-row mt-3 justify-around'>
-					<Button color='success' icon='Check' onPress={() => handleAnswer(true)} />
-					<Button color='danger' icon='Close' onPress={() => handleAnswer(false)} />
+					{Object.values(questionActionButton).map((action) => (
+						<Button
+							key={`anser-button-${action.type}`}
+							color={action.color}
+							icon={action.icon}
+							onPress={() => handleAnswer(action.type)}
+						/>
+					))}
 				</View>
 			</CardBody>
 		</Card>

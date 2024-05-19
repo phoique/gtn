@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { questionActionButton } from '../contants';
 
 const useGptMessage = () => {
 	const { t } = useTranslation();
@@ -22,14 +23,8 @@ const useGptMessage = () => {
 			reversedAnswers.forEach((answer) => {
 				response.push(
 					...[
-						{
-							role: 'assistant',
-							content: answer.question,
-						},
-						{
-							role: 'user',
-							content: answer.answer,
-						},
+						{ role: 'assistant', content: answer.question },
+						{ role: 'user', content: questionActionButton[answer.answerType].text },
 					],
 				);
 			});
