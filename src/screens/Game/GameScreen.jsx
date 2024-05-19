@@ -10,7 +10,6 @@ import AnswerCard from './components/AnswerCard';
 
 const GameScreen = () => {
 	const { t } = useTranslation();
-
 	const isStart = useSelector((state) => state.game.isStart);
 	const answers = useSelector((state) => state.game.answers);
 

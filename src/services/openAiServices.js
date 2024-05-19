@@ -6,12 +6,13 @@ export const openAiServices = createApi({
 		baseUrl: 'https://api.openai.com',
 		headers: {
 			'Content-Type': 'application/json',
+			'OpenAI-Beta': ' assistants=v2',
 			Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
 		},
 	}),
 	endpoints: (builder) => ({
-		getGptChat: (body) =>
-			builder.query({
+		getGptChat: builder.query({
+			query: (body) => ({
 				url: '/v1/chat/completions',
 				method: 'POST',
 				body: {
@@ -19,6 +20,7 @@ export const openAiServices = createApi({
 					messages: body.messages,
 				},
 			}),
+		}),
 	}),
 });
 

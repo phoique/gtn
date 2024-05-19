@@ -8,6 +8,7 @@ import gameSlice from './gameSlice';
 export const store = configureStore({
 	reducer: {
 		game: gameSlice.reducer,
+		[openAiServices.reducerPath]: openAiServices.reducer,
 	},
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware({
