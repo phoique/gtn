@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 import Card, { CardBody, CardHeader } from '../../../components/Card/Card';
 import Button from '../../../components/Button';
@@ -14,6 +14,7 @@ const QuestionCard = () => {
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
 	const navigation = useNavigation();
+	const number = useSelector((state) => state.game.number);
 	const { messages, answers } = useGptMessage();
 	const getGptChatQuery = openAiServices.useGetGptChatQuery({ messages });
 
@@ -26,7 +27,13 @@ const QuestionCard = () => {
 	};
 
 	const handleAnswer = (answer) => {
-		if (question.includes(t('screens.game.estimatedNumber')) && answer === true) {
+		const questionLoweCase = question.toLocaleLowerCase();
+		const estimatedNumber = questionLoweCase.match(/\d+/g);
+		if (
+			questionLoweCase.includes(t('screens.game.estimatedNumber')) &&
+			answer === true &&
+			estimatedNumber[0] === number
+		) {
 			navigation.navigate('WinGame');
 		} else if (remainingQuestion === 0) {
 			navigation.navigate('LoseGame');

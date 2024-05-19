@@ -10,7 +10,10 @@ const useGptMessage = () => {
 		const response = [
 			{
 				role: 'system',
-				content: t('screens.game.gptSystemText'),
+				content: t('screens.game.gptSystemText', {
+					min: process.env.MIN_NUMBER,
+					max: process.env.MAX_NUMBER,
+				}),
 			},
 		];
 
@@ -32,7 +35,7 @@ const useGptMessage = () => {
 			});
 		}
 		return response;
-	}, [answers]);
+	}, [answers, t]);
 
 	return { messages, answers };
 };

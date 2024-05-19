@@ -2,15 +2,19 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { useNavigation } from '@react-navigation/native';
+import { useDispatch } from 'react-redux';
 import Container from '../../components/Container';
 import Button from '../../components/Button';
 import Icon from '../../components/Icon';
+import gameSlice from '../../store/gameSlice';
 
 const WinGameScreen = () => {
 	const { t } = useTranslation();
 	const navigation = useNavigation();
+	const dispatch = useDispatch();
 
 	const handleRedirect = () => {
+		dispatch(gameSlice.actions.resetSlice());
 		navigation.navigate('Home');
 	};
 
