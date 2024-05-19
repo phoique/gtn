@@ -2,8 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
-
-// Slices
+import openAiServices from '../services/openAiServices';
 import gameSlice from './gameSlice';
 
 export const store = configureStore({
@@ -13,7 +12,7 @@ export const store = configureStore({
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware({
 			serializableCheck: false,
-		}).concat(),
+		}).concat(openAiServices.middleware),
 	devTools: process.env.NODE_ENV !== 'production',
 });
 
