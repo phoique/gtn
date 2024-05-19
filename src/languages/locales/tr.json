@@ -31,9 +31,7 @@
 			"numberEnter": "Sayıyı gir"
 		},
 		"validation": {
-			"numberEnterRequied": "Sayı girmek zorunludur!",
-			"numberEnterMin": "Girilen sayı {{min}}'den küçük olamaz!",
-			"numberEnterMax": "Girilen sayı {{max}}'den büyük olamaz!"
+			"numberEnterMinMax": "Girilen sayı {{min}}-{{max}} arasında olmalıdır!"
 		}
 	}
 }

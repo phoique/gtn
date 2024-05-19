@@ -6,14 +6,17 @@ import MainNavigation from './navigation/MainNavigation';
 import 'react-native-gesture-handler';
 import './languages';
 import ErrorScreen from './screens/Error/ErrorScreen';
+import Store from './store/Store';
 
 const App = () => {
 	return (
 		<SafeAreaProvider>
-			<ErrorBoundary FallbackComponent={ErrorScreen}>
-				<MainNavigation />
-			</ErrorBoundary>
-			<Toast />
+			<Store>
+				<ErrorBoundary FallbackComponent={ErrorScreen}>
+					<MainNavigation />
+				</ErrorBoundary>
+				<Toast />
+			</Store>
 		</SafeAreaProvider>
 	);
 };

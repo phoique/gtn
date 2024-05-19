@@ -13,6 +13,7 @@ const HomeScreen = () => {
 	const handleRedirect = () => {
 		navigation.navigate('Game');
 	};
+
 	return (
 		<Container>
 			<View className='flex flex-1'>

@@ -15,14 +15,16 @@ const colors = {
 	transparent: 'bg-transparent hover:bg-gray-200',
 };
 
-const Button = ({ title, onPress, color = 'light', icon }) => {
+const Button = ({ title, onPress, color = 'light', icon, disabled }) => {
 	if (!title && !icon) return null;
 	return (
 		<View className='flex-row'>
 			<Pressable
+				disabled={disabled}
 				onPress={onPress}
 				className={classnames('flex flex-row items-center gap-x-1 py-2 px-4 rounded-lg', {
 					[colors[color]]: color in colors,
+					'opacity-50 cursor-not-allowed': disabled,
 				})}>
 				{icon && <Icon type='custom' name={icon} className='text-white' />}
 				{title && <Text className='text-base font-bold text-white'>{title}</Text>}
