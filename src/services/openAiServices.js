@@ -17,6 +17,7 @@ export const openAiServices = createApi({
 				method: 'POST',
 				body: {
 					model: body?.model || 'gpt-3.5-turbo',
+					temperature: body.temperature || 1.5,
 					messages: body.messages,
 				},
 			}),

@@ -5,8 +5,8 @@ import en from './locales/en.json';
 
 i18n.use(initReactI18next).init({
 	compatibilityJSON: 'v3',
-	lng: 'en',
-	fallbackLng: 'en',
+	lng: 'tr',
+	fallbackLng: 'tr',
 	debug: false,
 	resources: {
 		tr: { translation: tr },

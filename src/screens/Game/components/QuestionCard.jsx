@@ -27,7 +27,7 @@ const QuestionCard = () => {
 		const estimatedNumber = questionLoweCase.match(/\d+/g);
 		if (
 			questionLoweCase.includes(t('screens.game.estimatedNumber')) &&
-			answer === true &&
+			answer === 'true' &&
 			estimatedNumber[0] === number
 		) {
 			navigation.navigate('WinGame');

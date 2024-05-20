@@ -6,6 +6,7 @@ import { questionActionButton } from '../contants';
 
 const AnswerCard = ({ question, answerType }) => {
 	const answerProperty = questionActionButton[answerType];
+
 	return (
 		<Card>
 			<CardBody>
